@@ -22,7 +22,7 @@ class PhotoInfo extends Component {
         animation: new Animated.Value(0)
     }
 
-    handleImageOpen = (idx) => {        
+    handleImageOpen = (idx) => {
         this.setState({activeImage: Images[idx]})
         Animated.spring(this.state.animation, {
             toValue: 1,
@@ -87,7 +87,7 @@ class PhotoInfo extends Component {
                     </View>
                 </ScrollView>
                 <TouchableWithoutFeedback onPress={this.handleClose}>
-                <AnimatedBlurView 
+                <AnimatedBlurView
                     tint="default"
                     intensity={100}
                     pointerEvents={this.state.activeImage ? "auto" : "none"}
@@ -95,14 +95,14 @@ class PhotoInfo extends Component {
                 >
                     <TouchableWithoutFeedback
                         pointerEvents={"none"}
-                    >                    
-                        <Animated.View style={[styles.popImageStyle, popImageStyle]}> 
+                    >
+                        <Animated.View style={[styles.popImageStyle, popImageStyle]}>
                                 <View style={styles.photoDetailBar}>
                                     <Image
                                         source={Images[3]}
                                         style={styles.userIconImage}
                                     />
-                                    <Text>Kuldeep Singh Grewal</Text>
+                                    <Text>Peter Kuria</Text>
                                 </View>
                                 <Image
                                     style={styles.photo}
